@@ -1,0 +1,22 @@
+@import "./variables";
+footer {
+  background-color: $main_third;
+  margin-top: 72px;
+  padding: 22px 0px 11px 0;
+  p {
+    margin: 0px;
+    padding-bottom: 8px;
+  }
+  a {
+    color: #1f4766;
+    font-weight: 700;
+  }
+}
+@media screen and (max-width: $break-point) {
+  footer {
+    .logo15 {
+      margin-bottom: 10px;
+    }
+    padding: 22px 15px;
+  }
+}

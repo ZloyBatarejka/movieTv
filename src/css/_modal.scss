@@ -1,0 +1,73 @@
+@import "./variables";
+.modal {
+  &-content {
+    top: 200px;
+    height: 400px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  &-title {
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0;
+  }
+  &-body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0 30px;
+  }
+  &-input {
+    input {
+      width: 100%;
+      margin-bottom: 30px;
+      &.wrong {
+        border-color: red;
+      }
+    }
+  }
+  button {
+    background-color: $main;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+  }
+  &-check {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      opacity: 0;
+      z-index: 5;
+      cursor: pointer;
+    }
+    .remember-fake {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid black;
+      border-radius: 3px;
+      color: $main;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .remember-label {
+      margin-left: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: $break_point) {
+  .modal-content {
+    top: 50px;
+  }
+}

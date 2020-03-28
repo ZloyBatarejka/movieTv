@@ -1,0 +1,19 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./header";
+@import "./variables";
+@import "./modal";
+@import "./switch";
+@import "./movies";
+@import "./genre";
+@import "./footer";
+@import "./scrollbar";
+@import "./tv";
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+.hide {
+  display: none !important;
+}

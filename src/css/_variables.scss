@@ -1,0 +1,12 @@
+$red: #e5261e;
+$dark_red: #cc221b;
+$grey: #f2f2f2;
+$main: $red;
+$main_dark: $dark_red;
+$main_third: $grey;
+$break_point: 968px;
+
+%input_border {
+  border: none;
+  border-bottom: 1px solid #333333;
+}

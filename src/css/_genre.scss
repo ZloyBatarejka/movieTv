@@ -1,0 +1,83 @@
+@import "./variables";
+.genre {
+  overflow: hidden;
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 24px;
+  }
+  &__figure {
+    width: 105%;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  &__gradient {
+    height: 208px;
+    width: 280px;
+  }
+  .comedy {
+    background: linear-gradient(136.27deg, #f2c94c 8.44%, #f29a4a 91.36%);
+  }
+  .drama {
+    background: linear-gradient(136.27deg, #f2994a 8.44%, #eb5757 91.36%);
+  }
+  .fantasy {
+    background: linear-gradient(136.27deg, #56ccf2 8.44%, #2f80ed 91.36%);
+  }
+  .horror {
+    background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
+  }
+
+  &__smile {
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%) scale(2);
+  }
+  &__capture {
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 5;
+  }
+  &__card:hover &__overlay {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $break-point) {
+  .genre {
+    &__title {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    &__card {
+      width: 95%;
+    }
+    &__gradient {
+      width: 100%;
+    }
+    &__smile {
+      left: 50%;
+      transform: translateX(-50%) scale(2);
+    }
+    &__capture {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "./variables";
+.switch {
+  margin-top: 50px;
+  margin-bottom: 35px;
+  font-size: 28px;
+  font-weight: bold;
+  &__movie {
+    cursor: pointer;
+    margin-right: 15px;
+    box-sizing: border-box;
+    border-bottom: 3px solid transparent;
+    &.active {
+      color: $main;
+      border-bottom: 3px solid $main;
+    }
+  }
+  &__tv {
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    &.active {
+      color: $main;
+      border-bottom: 3px solid $main;
+    }
+  }
+}
