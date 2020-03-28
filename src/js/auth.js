@@ -52,16 +52,9 @@ function renderUser() {
     ? localStorage.getItem("user")
     : "qwerty";
   username.textContent = name;
-  username.addEventListener("click", event => {
-    event.stopPropagation();
-    username.classList.add("hide");
-    changeInput.value = name;
-    changeInput.classList.remove("hide");
-    changing = true;
-  });
-  window.addEventListener("click", hideInput);
-
+  username.addEventListener("click", startChange);
   function hideInput(event) {
+    window.removeEventListener("click", hideInput);
     const username = document.querySelector("#username");
     const changeInput = document.querySelector("#username-change");
     if (!event.target.dataset.change) {
@@ -73,5 +66,15 @@ function renderUser() {
         renderUser();
       }
     }
+  }
+  function startChange(event) {
+    username.removeEventListener("click", startChange);
+    console.log("u");
+    event.stopPropagation();
+    username.classList.add("hide");
+    changeInput.value = name;
+    changeInput.classList.remove("hide");
+    changing = true;
+    window.addEventListener("click", hideInput);
   }
 }
