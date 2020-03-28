@@ -1,4 +1,6 @@
-window.addEventListener("load", render);
+window.addEventListener("load", () => {
+  render();
+});
 function render() {
   const loginBtn = document.querySelector("#enter");
   const login = document.querySelector("#input-login");
@@ -53,8 +55,8 @@ function renderUser() {
     : "qwerty";
   username.textContent = name;
   username.addEventListener("click", startChange);
+
   function hideInput(event) {
-    window.removeEventListener("click", hideInput);
     const username = document.querySelector("#username");
     const changeInput = document.querySelector("#username-change");
     if (!event.target.dataset.change) {
@@ -66,10 +68,10 @@ function renderUser() {
         renderUser();
       }
     }
+    window.removeEventListener("click", hideInput);
   }
   function startChange(event) {
     username.removeEventListener("click", startChange);
-    console.log("u");
     event.stopPropagation();
     username.classList.add("hide");
     changeInput.value = name;
