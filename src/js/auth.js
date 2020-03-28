@@ -47,26 +47,31 @@ export function renderHeader() {
 function renderUser() {
   const username = document.querySelector("#username");
   const changeInput = document.querySelector("#username-change");
-  const name = localStorage.getItem("user") || "qwerty";
+  let changing = false;
+  const name = localStorage.getItem("user")
+    ? localStorage.getItem("user")
+    : "qwerty";
   username.textContent = name;
   username.addEventListener("click", event => {
     event.stopPropagation();
     username.classList.add("hide");
     changeInput.value = name;
     changeInput.classList.remove("hide");
+    changing = true;
   });
   window.addEventListener("click", hideInput);
-}
-function hideInput(event) {
-  const username = document.querySelector("#username");
-  const changeInput = document.querySelector("#username-change");
-  if (!event.target.dataset.change) {
-    username.classList.remove("hide");
-    changeInput.classList.add("hide");
-    localStorage.setItem(
-      "user",
-      changeInput.value || localStorage.getItem("user")
-    );
-    renderUser();
+
+  function hideInput(event) {
+    const username = document.querySelector("#username");
+    const changeInput = document.querySelector("#username-change");
+    if (!event.target.dataset.change) {
+      if (changing) {
+        username.classList.remove("hide");
+        changeInput.classList.add("hide");
+        localStorage.setItem("user", changeInput.value);
+        changing = false;
+        renderUser();
+      }
+    }
   }
 }
