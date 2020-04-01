@@ -66,9 +66,10 @@ function renderUser() {
         localStorage.setItem("user", changeInput.value);
         changing = false;
         renderUser();
+        window.removeEventListener("click", hideInput);
       }
     }
-    window.removeEventListener("click", hideInput);
+
   }
   function startChange(event) {
     username.removeEventListener("click", startChange);
