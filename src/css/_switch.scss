@@ -6,8 +6,9 @@
   font-weight: bold;
   &__movie {
     cursor: pointer;
-    margin-right: 15px;
+    margin-left: 20px;
     box-sizing: border-box;
+    padding-bottom: 3px;
     border-bottom: 3px solid transparent;
     &.active {
       color: $main;
@@ -15,6 +16,7 @@
     }
   }
   &__tv {
+    margin-left: 17px;
     cursor: pointer;
     border-bottom: 3px solid transparent;
     &.active {

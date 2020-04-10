@@ -9,7 +9,8 @@
   margin-top: 32px;
   &__form {
     padding: 0;
-    margin-left: 70px;
+    margin-left: 85px;
+    margin-top: -5px;
     input {
       width: 65%;
     }
@@ -17,8 +18,8 @@
       border: none;
       background-color: transparent;
       color: $main;
-      margin-left: 24px;
-      margin-top: 3px;
+      margin-left: 19px;
+      margin-top: 7px;
     }
   }
   &__login {
@@ -30,6 +31,7 @@
     }
     button {
       background-color: $main;
+      margin-right: -3px;
       padding: 7px 30px;
       color: #fff;
       &:hover {
