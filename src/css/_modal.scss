@@ -1,15 +1,33 @@
 @import "./variables";
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
 .modal {
+  z-index: 15;
   &-content {
-    top: 200px;
-    height: 400px;
-    width: 300px;
+    margin-top: 200px !important;
+    height: 394px;
+    width: 304px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
   }
   &-title {
     font-weight: bold;
     text-align: center;
-    margin: 30px 0;
+    margin: 36px 0;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 24px;
   }
   &-body {
     display: flex;
@@ -20,7 +38,8 @@
   &-input {
     input {
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 23px;
+      padding: 4px;
       &.wrong {
         border-color: red;
       }
@@ -35,7 +54,7 @@
   }
   &-check {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
     input {
       position: absolute;
@@ -49,10 +68,9 @@
     }
     .remember-fake {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
+      left: 5px;
+      width: 16px;
+      height: 16px;
       border: 1px solid black;
       border-radius: 3px;
       color: $main;
@@ -61,13 +79,18 @@
       align-items: center;
     }
     .remember-label {
-      margin-left: 25px;
+      margin-left: 30px;
+    }
+    .enter {
+      width: 113px;
+      margin: 0 auto;
+      margin-top: 111px;
     }
   }
 }
 
 @media screen and (max-width: $break_point) {
   .modal-content {
-    top: 50px;
+    margin-top: 50px !important;
   }
 }

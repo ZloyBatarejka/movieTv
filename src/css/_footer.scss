@@ -1,7 +1,8 @@
 @import "./variables";
 footer {
+  width: 100%;
   background-color: $main_third;
-  margin-top: 72px;
+  margin-top: 62px;
   padding: 22px 0px 11px 0;
   p {
     margin: 0px;
@@ -12,10 +13,14 @@ footer {
     font-weight: 700;
   }
 }
+.contact {
+  margin-left: 33px;
+  font-size: 15px;
+}
 @media screen and (max-width: $break-point) {
   footer {
-    .logo15 {
-      margin-bottom: 10px;
+    .logo2 {
+      margin-bottom: 15px;
     }
     padding: 22px 15px;
   }

@@ -1,58 +1,70 @@
 @import "./variables";
 .movies {
+  &__row {
+    justify-content: space-around !important;
+  }
   &__title {
     font-size: 24px;
     font-weight: bold;
 
-    margin: 8px 0 25px 10px;
+    margin: 8px 0 15px 5px;
   }
-  .movies__card {
-    .movies__figure {
-      position: relative;
-      overflow: hidden;
-      border-radius: 15px;
-      height: 380px;
-      width: 105%;
-      img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover;
-      }
-      .figcaption {
-        display: none;
-      }
-    }
-  }
-  .movies__figure:hover .figcaption {
-    display: block;
-    padding: 15px;
-    opacity: 1;
-    z-index: 2;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    line-height: 180%;
-  }
+
   &__capture {
     font-size: 20px;
+    margin-top: 18px;
     padding-right: 5px;
     color: #333333;
   }
 }
 
+.movies__figure {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  height: 335px;
+  width: 255px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .figcaption {
+    display: none;
+  }
+}
+
+.movies__figure:hover .figcaption {
+  display: block;
+  padding: 15px;
+  opacity: 1;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  line-height: 180%;
+}
 @media screen and (max-width: $break-point) {
   .movies {
     &__hot {
       justify-content: center;
     }
     &__card {
-      max-width: 95% !important;
       padding: 10px;
+      margin: 0px !important;
       margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__capture {
+      margin: 10px 0px;
+      text-align: center;
     }
   }
 }

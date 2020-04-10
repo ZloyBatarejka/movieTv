@@ -1,9 +1,9 @@
 import "../css/styles.css";
-import "bootstrap";
 import "./auth";
 import { renderHeader } from "./auth";
 import "./check";
 import "./switch";
+import "./modal";
 import "../img/logo.png";
 import "../img/logo2.png";
 import "../img/batman.png";

@@ -1,4 +1,4 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./grid";
 @import "./header";
 @import "./variables";
 @import "./modal";
@@ -8,6 +8,7 @@
 @import "./footer";
 @import "./scrollbar";
 @import "./tv";
+
 * {
   padding: 0px;
   margin: 0px;
@@ -16,4 +17,14 @@
 }
 .hide {
   display: none !important;
+}
+.height {
+  height: 100vh !important;
+  overflow: hidden;
+}
+.toBottom {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
 }

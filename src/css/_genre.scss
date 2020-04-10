@@ -1,45 +1,36 @@
 @import "./variables";
 .genre {
   overflow: hidden;
+  &__row {
+    justify-content: space-between !important;
+  }
   &__title {
     font-size: 24px;
     font-weight: bold;
-    margin-top: 30px;
-    margin-bottom: 24px;
+    margin-top: 25px;
+    margin-bottom: 12px;
   }
   &__figure {
-    width: 105%;
+    width: 255px;
     position: relative;
     border-radius: 5px;
     overflow: hidden;
     cursor: pointer;
   }
   &__gradient {
-    height: 208px;
-    width: 280px;
-  }
-  .comedy {
-    background: linear-gradient(136.27deg, #f2c94c 8.44%, #f29a4a 91.36%);
-  }
-  .drama {
-    background: linear-gradient(136.27deg, #f2994a 8.44%, #eb5757 91.36%);
-  }
-  .fantasy {
-    background: linear-gradient(136.27deg, #56ccf2 8.44%, #2f80ed 91.36%);
-  }
-  .horror {
-    background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
+    height: 190px;
+    width: 278px;
   }
 
   &__smile {
     position: absolute;
-    top: 95px;
+    top: 85px;
     left: 50%;
     transform: translateX(-50%) scale(2);
   }
   &__capture {
     position: absolute;
-    top: 170px;
+    top: 150px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -57,6 +48,18 @@
     display: none;
   }
 }
+.comedy {
+  background: linear-gradient(136.27deg, #f2c94c 8.44%, #f29a4a 91.36%);
+}
+.drama {
+  background: linear-gradient(136.27deg, #f2994a 8.44%, #eb5757 91.36%);
+}
+.fantasy {
+  background: linear-gradient(136.27deg, #56ccf2 8.44%, #2f80ed 91.36%);
+}
+.horror {
+  background: linear-gradient(136.27deg, #828282 8.44%, #333333 91.36%);
+}
 
 @media screen and (max-width: $break-point) {
   .genre {
@@ -66,7 +69,11 @@
       text-align: center;
     }
     &__card {
-      width: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
     }
     &__gradient {
       width: 100%;
