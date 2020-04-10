@@ -1,6 +1,5 @@
 @import "./variables";
 .genre {
-  overflow: hidden;
   &__row {
     justify-content: space-between !important;
   }
@@ -11,7 +10,7 @@
     margin-bottom: 12px;
   }
   &__figure {
-    width: 255px;
+    width: 257px;
     position: relative;
     border-radius: 5px;
     overflow: hidden;

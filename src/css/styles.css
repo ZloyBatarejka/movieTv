@@ -135,7 +135,7 @@
 }
 
 .m8 {
-  margin-right: 21px;
+  margin-right: 18px;
 }
 
 @media screen and (max-width: 1120px) {
@@ -536,10 +536,6 @@
   border-bottom: 1px solid #333333;
 }
 
-.genre {
-  overflow: hidden;
-}
-
 .genre__row {
   -webkit-box-pack: justify !important;
       -ms-flex-pack: justify !important;
@@ -554,7 +550,7 @@
 }
 
 .genre__figure {
-  width: 255px;
+  width: 257px;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
