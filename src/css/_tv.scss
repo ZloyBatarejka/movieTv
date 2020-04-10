@@ -32,6 +32,9 @@
 
 @media screen and (max-width: $break-point) {
   .tv {
+    &__box {
+      height: 60vh;
+    }
     &__img {
       margin-bottom: 20px;
     }
