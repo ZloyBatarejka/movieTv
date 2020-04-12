@@ -30,22 +30,6 @@ function auth(login, password) {
     }
   }
 }
-function validateUsername(login) {
-  if (login.value !== "qwerty") {
-    addWrong(login);
-    return false;
-  }
-  removeWrong(login);
-  return true;
-}
-function validatePasswrod(password) {
-  if (+password.value !== 123456) {
-    addWrong(password);
-    return false;
-  }
-  removeWrong(password);
-  return true;
-}
 
 export function renderHeader() {
   const token = JSON.parse(localStorage.getItem("token") || "false");
@@ -53,11 +37,11 @@ export function renderHeader() {
   const guest = document.querySelector(".guest");
   if (token) {
     renderUser();
-    show(user);
-    hide(guest);
+    changeStatus(user, "show");
+    changeStatus(guest, "hide");
   } else {
-    hide(user);
-    show(guest);
+    changeStatus(user, "hide");
+    changeStatus(guest, "show");
   }
 }
 function renderUser() {
@@ -75,8 +59,8 @@ function renderUser() {
     const changeInput = document.querySelector("#username-change");
     if (!event.target.dataset.change) {
       if (changing) {
-        show(username);
-        hide(changeInput);
+        changeStatus(username, "show");
+        changeStatus(changeInput, "hide");
         localStorage.setItem("user", changeInput.value);
         changing = false;
         renderUser();
@@ -88,23 +72,41 @@ function renderUser() {
   function startChange(event) {
     username.removeEventListener("click", startChange);
     event.stopPropagation();
-    hide(username);
+    changeStatus(username, "hide");
     changeInput.value = name;
-    show(changeInput);
+    changeStatus(changeInput, "show");
     changing = true;
     window.addEventListener("click", hideInput);
   }
 }
+function validateUsername(login) {
+  if (login.value !== "qwerty") {
+    changeStatus(login, "addWrong");
+    return false;
+  }
+  changeStatus(login, "removeWrong");
+  return true;
+}
+function validatePasswrod(password) {
+  if (+password.value !== 123456) {
+    changeStatus(password, "addWrong");
+    return false;
+  }
+  changeStatus(password, "removeWrong");
+  return true;
+}
 
-function hide(element) {
-  element.classList.add("hide");
-}
-function show(element) {
-  element.classList.remove("hide");
-}
-function addWrong(element) {
-  element.classList.add("wrong");
-}
-function removeWrong(element) {
-  element.classList.remove("wrong");
+function changeStatus(element, type) {
+  switch (type) {
+    case "hide":
+      return element.classList.add("hide");
+    case "show":
+      return element.classList.remove("hide");
+    case "addWrong":
+      return element.classList.add("wrong");
+    case "removeWrong":
+      return element.classList.remove("wrong");
+    default:
+      return element;
+  }
 }
