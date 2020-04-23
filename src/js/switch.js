@@ -12,6 +12,7 @@ window.addEventListener("load", () => {
       switches.forEach((item) => {
         item.classList.remove("active");
       });
+      document.body.classList.toggle("scroll-hider")
       item.classList.add("active");
       switcher[item.dataset.switch](tv, movies);
     });

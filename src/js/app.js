@@ -14,6 +14,7 @@ import "../img/first.png";
 import "../img/twotwo.png";
 import "../img/amedia.png";
 import "../img/rbc.png";
+import "../img/fire.png"
 window.addEventListener("load", () => {
   renderHeader();
 });

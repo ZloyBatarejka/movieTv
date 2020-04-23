@@ -3,8 +3,12 @@
   border-bottom: 1px solid #333333;
 }
 
+.scroll-hider {
+  margin-right: 17px;
+}
+
 .container {
-  max-width: 1080px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -134,10 +138,6 @@
   margin-right: 20px;
 }
 
-.m8 {
-  margin-right: 18px;
-}
-
 @media screen and (max-width: 1120px) {
   .row {
     -webkit-box-orient: vertical;
@@ -181,20 +181,37 @@
 
 .header__form {
   padding: 0;
-  margin-left: 85px;
-  margin-top: -5px;
+  margin-left: 88px;
+  margin-top: 5px;
 }
 
 .header__form input {
-  width: 65%;
+  height: 32px;
+  width: 320px;
+}
+
+.header__form input::-webkit-input-placeholder {
+  font-size: 15px;
+}
+
+.header__form input:-ms-input-placeholder {
+  font-size: 15px;
+}
+
+.header__form input::-ms-input-placeholder {
+  font-size: 15px;
+}
+
+.header__form input::placeholder {
+  font-size: 15px;
 }
 
 .header__form button {
   border: none;
   background-color: transparent;
   color: #e5261e;
-  margin-left: 19px;
-  margin-top: 7px;
+  margin-left: 20px;
+  font-size: 16px;
 }
 
 .header__login {
@@ -215,8 +232,10 @@
 
 .header__login button {
   background-color: #e5261e;
-  margin-right: -3px;
-  padding: 7px 30px;
+  margin-right: 2px;
+  margin-top: 5px;
+  padding: 7px 32px;
+  font-size: 16px;
   color: #fff;
 }
 
@@ -265,7 +284,7 @@
     text-align: center;
   }
   .header__form {
-    width: auto;
+    max-width: 80%;
     margin: 30px auto;
   }
   .header__login {
@@ -417,18 +436,19 @@
 }
 
 .switch {
-  margin-top: 38px;
+  margin-top: 44px;
   margin-bottom: 23px;
+  text-align: center;
+  letter-spacing: 1px;
   font-size: 28px;
   font-weight: bold;
 }
 
 .switch__movie {
   cursor: pointer;
-  margin-left: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-bottom: 3px;
+  padding-bottom: 6px;
   border-bottom: 3px solid transparent;
 }
 
@@ -438,7 +458,7 @@
 }
 
 .switch__tv {
-  margin-left: 17px;
+  margin-left: 24px;
   cursor: pointer;
   border-bottom: 3px solid transparent;
 }
@@ -471,12 +491,23 @@
   color: #333333;
 }
 
+.movies__hot {
+  position: relative;
+}
+
+.movies .hot {
+  width: 30px;
+  height: 32px;
+  margin-top: 3px;
+  margin-right: -4px;
+}
+
 .movies__figure {
   position: relative;
   overflow: hidden;
   border-radius: 15px;
-  height: 335px;
-  width: 255px;
+  height: 370px;
+  width: 280px;
 }
 
 .movies__figure img {
@@ -549,12 +580,12 @@
 .genre__title {
   font-size: 24px;
   font-weight: bold;
-  margin-top: 25px;
-  margin-bottom: 12px;
+  margin-top: 32px;
+  margin-bottom: 14px;
 }
 
 .genre__figure {
-  width: 257px;
+  width: 280px;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
@@ -562,21 +593,22 @@
 }
 
 .genre__gradient {
-  height: 190px;
-  width: 278px;
+  height: 208px;
+  width: 280px;
 }
 
 .genre__smile {
   position: absolute;
-  top: 85px;
+  top: 90px;
   left: 50%;
-  -webkit-transform: translateX(-50%) scale(2);
-          transform: translateX(-50%) scale(2);
+  -webkit-transform: translateX(-50%) scale(2.2);
+          transform: translateX(-50%) scale(2.2);
 }
 
 .genre__capture {
   position: absolute;
-  top: 150px;
+  top: 160px;
+  font-size: 20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -658,7 +690,7 @@
 footer {
   width: 100%;
   background-color: #f2f2f2;
-  margin-top: 62px;
+  margin-top: 72px;
   padding: 22px 0px 11px 0;
 }
 
@@ -673,8 +705,8 @@ footer a {
 }
 
 .contact {
-  margin-left: 33px;
-  font-size: 15px;
+  margin-left: 40px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 1120px) {
@@ -719,7 +751,7 @@ footer a {
 
 .tv__box {
   max-height: 66vh;
-  width: 1080px;
+  width: 1180px;
   max-width: 100%;
   margin: 0 auto;
   overflow: auto;
@@ -727,9 +759,10 @@ footer a {
 
 .tv__channel {
   border-radius: 8px;
+  height: 162px;
   margin-bottom: 16px;
   margin-right: 10px;
-  padding: 13px;
+  padding: 20px;
   background-color: #f2f2f2;
 }
 
@@ -737,8 +770,14 @@ footer a {
   color: #e5261e;
 }
 
+.tv__table {
+  margin-left: 18px;
+  margin-top: 10px;
+}
+
 .tv__name {
   font-size: 20px;
+  margin-bottom: 17px;
   font-weight: bold;
 }
 

@@ -1,7 +1,9 @@
 @import "./variables";
-
+.scroll-hider{
+  margin-right: 17px;
+}
 .container {
-  max-width: 1080px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 .row {
@@ -88,9 +90,7 @@
 .m5 {
   margin-right: 20px;
 }
-.m8 {
-  margin-right: 18px;
-}
+
 
 @media screen and (max-width: $break-point) {
   .row {

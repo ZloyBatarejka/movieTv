@@ -9,17 +9,21 @@
   margin-top: 32px;
   &__form {
     padding: 0;
-    margin-left: 85px;
-    margin-top: -5px;
+    margin-left: 88px;
+    margin-top: 5px;
     input {
-      width: 65%;
+      height: 32px;
+      width: 320px;
+      &::placeholder{
+        font-size: 15px;
+      }
     }
     button {
       border: none;
       background-color: transparent;
       color: $main;
-      margin-left: 19px;
-      margin-top: 7px;
+      margin-left: 20px;
+      font-size: 16px;
     }
   }
   &__login {
@@ -31,8 +35,10 @@
     }
     button {
       background-color: $main;
-      margin-right: -3px;
-      padding: 7px 30px;
+      margin-right: 2px;
+      margin-top: 5px;
+      padding: 7px 32px;
+      font-size: 16px;
       color: #fff;
       &:hover {
         background-color: $main_dark;
@@ -71,7 +77,7 @@
       text-align: center;
     }
     &__form {
-      width: auto;
+      max-width: 80%;
       margin: 30px auto;
     }
     &__login {

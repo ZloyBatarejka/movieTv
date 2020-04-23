@@ -2,23 +2,29 @@
 .tv {
   &__box {
     max-height: 66vh;
-    width: 1080px;
+    width: 1180px;
     max-width: 100%;
     margin: 0 auto;
     overflow: auto;
   }
   &__channel {
     border-radius: 8px;
+    height: 162px;
     margin-bottom: 16px;
     margin-right: 10px;
-    padding: 13px;
+    padding: 20px;
     background-color: $main_third;
   }
   .active {
     color: $main;
   }
+  &__table {
+    margin-left: 18px;
+    margin-top: 10px;
+  }
   &__name {
     font-size: 20px;
+    margin-bottom: 17px;
     font-weight: bold;
   }
   &__programm {
