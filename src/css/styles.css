@@ -772,7 +772,7 @@ footer a {
 }
 
 .tv__img {
-  margin-top: -30px;
+  margin-top: -28px;
 }
 
 .tv__table {
@@ -782,6 +782,7 @@ footer a {
 }
 
 .tv__name {
+  font-family: "Rubick";
   font-size: 20px;
   margin-bottom: 17px;
   font-weight: bold;
