@@ -12,15 +12,20 @@
     height: 162px;
     margin-bottom: 16px;
     margin-right: 10px;
-    padding: 20px;
+    padding: 15px;
+    padding-bottom: 19px;
     background-color: $main_third;
   }
   .active {
     color: $main;
   }
+  &__img {
+    margin-top: -30px;
+  }
   &__table {
     margin-left: 18px;
-    margin-top: 10px;
+    padding-top: 8px;
+    padding-bottom: 20px;;
   }
   &__name {
     font-size: 20px;
