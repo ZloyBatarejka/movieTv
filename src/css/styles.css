@@ -801,7 +801,11 @@ footer a {
   .tv__box {
     height: 60vh;
   }
+  .tv__channel {
+    height: auto;
+  }
   .tv__img {
+    margin-top: 0px;
     margin-bottom: 20px;
   }
 }

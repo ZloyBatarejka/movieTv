@@ -47,7 +47,11 @@
     &__box {
       height: 60vh;
     }
+    &__channel {
+      height: auto;
+    }
     &__img {
+      margin-top: 0px;
       margin-bottom: 20px;
     }
   }
